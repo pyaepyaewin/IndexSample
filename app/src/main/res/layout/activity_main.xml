@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <View
+            android:id="@+id/vBackground"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#40C4FF"
+    />
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cvProfileImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+    >
+
+        <ImageView
+                android:id="@+id/ivProfileImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="fitXY"
+        />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Name"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@id/cvProfileImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+    />
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cvBody"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="10dp"
+            android:layout_below="@id/tvName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp"
+    >
+        <LinearLayout
+                android:id="@+id/llBody"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3"
+        >
+
+            <LinearLayout
+                    android:id="@+id/llPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+            >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Photos"/>
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="160"
+                          android:layout_marginTop="10dp"
+                />
+
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/llFollower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+
+            >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Followers"/>
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="160M"
+                          android:layout_marginTop="10dp"
+
+                />
+
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/llFollowing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+            >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Following"/>
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="160K"
+                          android:layout_marginTop="10dp"
+
+                />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/cvBody"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp">
+        <LinearLayout
+                android:id="@+id/llContentEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_email_blue_24dp"
+            />
+            <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="blabla@gmail.com"
+                    android:layout_marginStart="16dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/llContentPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+        >
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_phone_iphone_black_24dp"
+            />
+            <TextView
+                    android:id="@+id/tvphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="75893427598"
+                    android:layout_marginStart="16dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/llContentBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+        >
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_date_range_blue_24dp"
+            />
+            <TextView
+                    android:id="@+id/tvBirthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.3.2015"
+                    android:layout_marginStart="16dp"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/llContentJob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+        >
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_work_black_24dp"
+            />
+            <TextView
+                    android:id="@+id/tvJob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Developer"
+                    android:layout_marginStart="16dp"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/btnEditProfile"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Edit_Profile"
+            android:layout_below="@id/llContent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:background="#40C4FF"
+            android:textColor="#FFFFFF"
+    />
+
+
+</RelativeLayout>
